@@ -1,17 +1,14 @@
-PolyMap: Polygon-Based 2D Map Generator
-=======================================
+# PolyMap: Polygon-Based 2D Map Generator
 
-Basic Information
-=================
+## Basic Information
 
-- GitHub Repository: [Provide the URL to your GitHub repository here]
+- GitHub Repository: https://github.com/oooJiun/PolyMap
 
 PolyMap is a tool that empowers users to create custom 2D maps with a user-friendly Python interface. 
 To achieve this goal, PolyMap will use boolean operations, such as AND, OR, NOT, and XOR, on polygons to generate the map.
 
 
-Problem to Solve
-================
+## Problem to Solve
 
 In Euclidean space, our objective is to perform polygonal Boolean operations for extracting geometric properties from graphics. 
 These operations are valuable for tasks like combining polygons, terrain elevation modeling, and random map generation.
@@ -20,8 +17,7 @@ The goal of this project is to let user can define the polygons by themselves an
 Users can design custom maps for games, visualize geographic data, and develop training simulations.
 
 
-System Architecture
-===================
+## System Architecture
 
 Input: Users define polygons, terrain parameters, and map parameters through the graphical user interface.
 Processing: The system applies Boolean operations, elevation modeling, and randomization to generate maps.
@@ -30,8 +26,7 @@ Constraints: Assumes that users have basic knowledge of map design concepts.
 Modularization: The system is divided into modules for polygon creation, Boolean operations, elevation modeling, and map rendering.
 
 
-API Description
-===============
+## API Description
 
 The system can be scripted using both C++ and Python.
 Example Script (Python):
@@ -55,8 +50,7 @@ generated_map.export('output_map.png')
 ```
 
 
-Engineering Infrastructure
-==========================
+## Engineering Infrastructure
 
 1. Automatic build system: `Makefile`
 2. Version control: `git`
@@ -64,8 +58,7 @@ Engineering Infrastructure
 4. Documentation: `README.md`
 
 
-Schedule
-========
+## Schedule
 
 * Planning phase (6 weeks from mm/dd to mm/dd):
 * Week 1 (10/30): Learn the algorithm for boolean operations on polygons
@@ -78,8 +71,7 @@ Schedule
 * Week 8 (12/18): Finalize the project and prepare the presentation
 
 
-References
-==========
+## References
 
 Boolean operations on polygons in JavaScript: https://github.com/velipso/polybooljs
 
