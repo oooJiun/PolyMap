@@ -19,11 +19,11 @@ Users can design custom maps for games, visualize geographic data, and develop t
 
 ## System Architecture
 
-Input: Users define polygons, terrain parameters, and map parameters through the graphical user interface.
-Processing: The system applies Boolean operations, elevation modeling, and randomization to generate maps.
-Output: The generated 2D maps are displayed in the graphical user interface and can be exported in common image formats.
-Constraints: Assumes that users have basic knowledge of map design concepts.
-Modularization: The system is divided into modules for polygon creation, Boolean operations, elevation modeling, and map rendering.
+- Input: Users define polygons, terrain parameters, and map parameters through the graphical user interface.
+- Processing: The system applies Boolean operations, elevation modeling, and randomization to generate maps.
+- Output: The generated 2D maps are displayed in the graphical user interface and can be exported in common image formats.
+- Constraints: Assumes that users have basic knowledge of map design concepts.
+- Modularization: The system is divided into modules for polygon creation, Boolean operations, elevation modeling, and map rendering.
 
 
 ## API Description
