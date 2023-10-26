@@ -60,7 +60,6 @@ generated_map.export('output_map.png')
 
 ## Schedule
 
-* Planning phase (6 weeks from mm/dd to mm/dd):
 * Week 1 (10/30): Learn the algorithm for boolean operations on polygons
 * Week 2 (11/06): Design data structures and algorithms
 * Week 3 (11/13): Implement the boolean operations on polygons algorithm in C++
