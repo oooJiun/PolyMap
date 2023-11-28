@@ -3,6 +3,7 @@ from PyQt5.QtWidgets import QApplication, QGraphicsView, QGraphicsScene, QGraphi
 from PyQt5.QtCore import Qt, QPointF
 from PyQt5.QtGui import QPainter, QPen, QBrush, QPolygonF, QColor
 from PyQt5.QtWidgets import QHBoxLayout
+import boolOp
 
 class PolygonDrawer(QGraphicsView):
     def __init__(self, grid_size=20):
@@ -64,9 +65,23 @@ class PolygonDrawer(QGraphicsView):
             for vertex in self.vertices_p2:
                 print(f"({vertex.x()/10}, {vertex.y()/10})")
 
+
     def and_operation(self):
+        py_clip = boolOp.Pg()
+        py_clip.pts = [boolOp.Point(int(v.x()), int(v.y())) for v in self.vertices]
+
+        py = boolOp.Pg()
+        py.pts = [boolOp.Point(int(v.x()), int(v.y())) for v in self.vertices_p2]
+
+        result = boolOp.andOperation(py_clip, py)
+        self.vertices = []
+        self.lines = []
         self.vertices_p2 = []
         self.lines_p2 = []
+        print(result, result.pts[0].x, len(result.pts))
+        for i in range(len(result.pts)):
+            self.vertices.append(QPointF(result.pts[i].x,result.pts[i].y))
+        self.scene.addPolygon(QPolygonF([vertex for vertex in self.vertices]), QPen(), QBrush(Qt.green))
 
     def or_operation(self):
         self.vertices_p2 = []
