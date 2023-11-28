@@ -1,11 +1,15 @@
 CC = g++
-GLFLAGS = -lGL -lGLU -lglut
-SRC = AND.cpp
+PYFLAGS = -O3 -Wall --shared -std=c++17 -fPIC `python3 -m pybind11 --includes` `python3-config --includes --ldflags`
+SRC = boolOp.cpp
 
-.PHONY: all clean
-all:
-	$(CC) $(SRC) $(GLFLAGS) -o output
-	./output
+.PHONY: all test clean
+boolOp.so: $(SRC)
+	$(CC) $(PYFLAGS) $^ -o $@
+
+all: boolOp.so
+
+test: 
+	python ui.py
 
 clean:
-	rm output
+	rm -rf *.o *.so __pycache__ .pytest_cache/  
